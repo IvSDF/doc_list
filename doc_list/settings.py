@@ -95,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'doc_list_db',
         'USER': 'root',
-        'PASSWORD': '9O9z964Q@',
+        'PASSWORD': 'PASSWORD',
         'HOST': 'localhost',
         'PORT': '3306'
     }

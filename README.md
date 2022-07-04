@@ -1,9 +1,10 @@
 **Hi!**
 
+
 # **Step-by-step description of project deployment and launch**
 
    1. Clone project team -
-`git clone`
+`git clone - https://github.com/IvSDF/doc_list`
 
    2. Set in the root folder install virtual environment -
 `python -m venv venv`
@@ -11,12 +12,15 @@
    3. Activate the virtual environment with a command -
 `"source venv/bin/activate" (for Windows "venv\Scripts\activate" without a word source)`
 
-   4. Install the necessary packages -
+   4. Install mysqlclient
+'sudo yum install python3-devel mysql-devel'
+[If mysqlclient is not installed, read the documentation - ](https://pypi.org/project/mysqlclient/)
+
+   5. Install the necessary packages -
 `pip install -r requirements.txt`
 
-
-
-# **_MySQL Database recovery_**
+_______________________________________________________________________________
+   6. # **_MySQL Database recovery_**
 
     1. Create an empty db -
 
@@ -26,13 +30,14 @@
 4. quit
 
 
+
     2. Restore the dump to the newly created database - 
 
 1. mysql -u root -p -f doc_list_db < /home/username/dump_doc_list_db.sql
-2. mypassword
+   mypassword
+_________________________________________________________________________________
 
-
-    3. Configure access to settings.py - 
+   7. Configure access to settings.py - 
 
 DATABASES = {
     'default': {
@@ -45,7 +50,11 @@ DATABASES = {
     }
 }
 
-[If mysqlclient is not installed, read the documentation - ](https://pypi.org/project/mysqlclient/)
+   8. Сreate a superuser
+`python manage.py createsuperuser`
+or use:
+    Username: admin
+    Password: admin
 
 
 
@@ -54,11 +63,11 @@ DATABASES = {
     1. Use - http://127.0.0.1:8000/swagger/ (This is not a complete api documentation. 
                                                 Here you will find the main requests GET)
 
-        All direction - 
+        return All direction - 
             GET /api/v1/direction
-        All doctors - 
+        return All doctors - 
             GET /api/v1/doctors  (WITH PAGINATION - "2")
-        ITEM doctor - GET 
+        return ITEM doctor - GET 
             GET /api/v1/doctors/(slug) 
 
     2. Filters - 

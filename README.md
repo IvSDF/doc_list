@@ -6,15 +6,14 @@
    1. Clone project team -
 `git clone - https://github.com/IvSDF/doc_list`
 
-   2. Set in the root folder install virtual environment -
-`python -m venv venv`
-
-   3. Activate the virtual environment with a command -
+   2. Activate the virtual environment with a command -
 `"source venv/bin/activate" (for Windows "venv\Scripts\activate" without a word source)`
 
-   4. Install mysqlclient
-'sudo yum install python3-devel mysql-devel'
-[If mysqlclient is not installed, read the documentation - ](https://pypi.org/project/mysqlclient/)
+   3. Set in the root folder install virtual environment -
+`python -m venv venv`
+
+   4. Activate the virtual environment with a command - 
+`source venv/bin/activate`
 
    5. Install the necessary packages -
 `pip install -r requirements.txt`
